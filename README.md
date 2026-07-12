@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.9 seconds
-Output:
 # Agger 2026 Reise-App
 
 Mobile-first PWA für Marc, Anne und Twix. Ohne Konfiguration funktioniert die Packliste lokal und offline. Mit Supabase wird sie zwischen beiden Geräten synchronisiert.
