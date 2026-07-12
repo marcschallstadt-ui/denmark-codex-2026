@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b5122b">
+  <meta name="description" content="Persönlicher Reisebegleiter für Agger 2026">
+  <title>Agger 2026</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=88" alt="Dünenweg zur dänischen Nordsee">
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <p class="eyebrow">19.-30. Juli 2026</p>
+      <h1>Unser Dänemark</h1>
+      <p>Agger · Nationalpark Thy</p>
+      <div class="people">Marc <span>·</span> Anne <span>·</span> Twix</div>
+    </div>
+  </header>
+
+  <main id="app">
+    <section class="view active" data-view="home" aria-labelledby="home-title">
+      <div class="section-head">
+        <div><p class="kicker">Velkommen</p><h2 id="home-title">Reise auf einen Blick</h2></div>
+        <div class="countdown" id="countdown"></div>
+      </div>
+
+      <article class="feature-card">
+        <div class="feature-icon">DK</div>
+        <div><p class="label">Unser Zuhause</p><h3>Klitvej 4, Agger</h3><p>10 Nächte · 90 Meter bis zur Nordsee</p></div>
+        <a class="round-link" href="https://www.google.com/maps/search/?api=1&query=Klitvej+4%2C+7770+Vestervig%2C+Denmark" target="_blank" rel="noopener" aria-label="Ferienhaus in Google Maps öffnen">↗</a>
+      </article>
+
+      <div class="quick-grid">
+        <a class="quick" href="tel:+4597938022"><span class="quick-symbol">☎</span><strong>Feriepartner</strong><small>+45 97 93 80 22</small></a>
+        <button class="quick" data-go="pack"><span class="quick-symbol">✓</span><strong>Packliste</strong><small id="packing-progress">0 von 0 erledigt</small></button>
+        <a class="quick" href="https://www.google.com/maps/dir/Zinken+9,+79227+Schallstadt/B%26B+Hotel+Flensburg-City,+Suederhofenden+14,+24937+Flensburg" target="_blank" rel="noopener"><span class="quick-symbol">→</span><strong>Anreise</strong><small>Etappe 1 öffnen</small></a>
+        <a class="quick" href="https://www.google.com/maps/dir/B%26B+Hotel+Flensburg-City,+Suederhofenden+14,+24937+Flensburg/Klitvej+4,+7770+Vestervig,+Denmark" target="_blank" rel="noopener"><span class="quick-symbol">→</span><strong>Nach Agger</strong><small>Etappe 2 öffnen</small></a>
+      </div>
+
+      <h3 class="subhead">Die nächsten Schritte</h3>
+      <div class="mini-list" id="next-steps"></div>
+    </section>
+
+    <section class="view" data-view="trip" aria-labelledby="trip-title">
+      <div class="section-head"><div><p class="kicker">Unterwegs</p><h2 id="trip-title">Reise & Haus</h2></div></div>
+
+      <div class="segmented" role="tablist" aria-label="Reiseinformationen">
+        <button class="selected" data-panel="outbound">Hinfahrt</button>
+        <button data-panel="house">Haus</button>
+        <button data-panel="return">Rückfahrt</button>
+      </div>
+
+      <div class="trip-panel active" id="outbound">
+        <article class="route-card">
+          <p class="route-date">SO · 19. JULI</p><h3>Schallstadt → Flensburg</h3><p>ca. 9 Stunden Fahrt plus Pausen</p>
+          <ol><li><span>07:00</span>Abfahrt Schallstadt</li><li><span>09:00</span>Pause Raum Bruchsal</li><li><span>11:30</span>Bad Hersfeld / Kirchheim</li><li><span>14:00</span>Mittag Raum Göttingen</li><li><span>16:30</span>Lüneburger Heide</li><li><span>18:30</span>Flensburg</li></ol>
+          <a class="primary-action" href="https://www.google.com/maps/dir/Zinken+9,+79227+Schallstadt/B%26B+Hotel+Flensburg-City,+Suederhofenden+14,+24937+Flensburg" target="_blank" rel="noopener">Route in Google Maps</a>
+        </article>
+        <article class="route-card">
+          <p class="route-date">MO · 20. JULI</p><h3>Flensburg → Agger</h3><p>ca. 3-3,5 Stunden · Check-in ab 16:00</p>
+          <ol><li><span>09:00</span>Abfahrt und Grenze</li><li><span>10:30</span>Pause Raum Vejle</li><li><span>12:30</span>Thyborøn oder Landweg</li><li><span>13:00</span>Einkauf und Strandrunde</li><li><span>16:00</span>Ferienhaus beziehen</li></ol>
+          <a class="primary-action" href="https://www.google.com/maps/dir/B%26B+Hotel+Flensburg-City,+Suederhofenden+14,+24937+Flensburg/Klitvej+4,+7770+Vestervig,+Denmark" target="_blank" rel="noopener">Route in Google Maps</a>
+        </article>
+      </div>
+
+      <div class="trip-panel" id="house">
+        <article class="info-card"><p class="kicker">Ferienhaus 1355</p><h3>Klein, einfach, direkt hinter den Dünen</h3><dl><div><dt>Adresse</dt><dd>Klitvej 4, 7770 Vestervig</dd></div><div><dt>Check-in</dt><dd>20.07. ab 16:00 Uhr</dd></div><div><dt>Check-out</dt><dd>30.07. bis 10:00 Uhr</dd></div><div><dt>Strand</dt><dd>90 Meter</dd></div><div><dt>Einkauf</dt><dd>690 Meter</dd></div><div><dt>Internet</dt><dd>Starlink mitnehmen</dd></div></dl></article>
+        <article class="note"><strong>48 Stunden vorher</strong><p>Schlüsselcode in „Mein Feriepartner“ abrufen und als Screenshot sichern.</p></article>
+        <article class="info-card"><h3>Gebucht und inklusive</h3><ul><li>Endreinigung und Wasser</li><li>2 Bettwäsche-/Handtuchpakete</li><li>Terrasse, Gasgrill und Außendusche</li><li>Hunde willkommen</li><li>Strom nach Verbrauch</li></ul></article>
+      </div>
+
+      <div class="trip-panel" id="return">
+        <article class="info-card"><p class="kicker">Empfehlung</p><h3>Agger → Göttingen/Kassel</h3><p>Am 30. Juli das große Stück fahren. Am 31. Juli bleiben nur etwa vier Stunden bis Schallstadt.</p><a class="primary-action" href="https://www.google.com/maps/dir/Klitvej+4,+7770+Vestervig,+Denmark/G%C3%B6ttingen/Zinken+9,+79227+Schallstadt" target="_blank" rel="noopener">Rückroute öffnen</a></article>
+        <div class="option-list"><div><b>A</b><span><strong>Göttingen / Kassel</strong><small>8 h + 4 h · empfohlen</small></span></div><div><b>B</b><span><strong>Hannover</strong><small>6,5 h + 6 h</small></span></div><div><b>C</b><span><strong>Flensburg / Hamburg</strong><small>3,5-4,5 h + 8-9 h</small></span></div></div>
+      </div>
+    </section>
+
+    <section class="view" data-view="discover" aria-labelledby="discover-title">
+      <div class="section-head"><div><p class="kicker">Nationalpark Thy</p><h2 id="discover-title">Entdecken</h2></div></div>
+      <div class="filter-row" id="place-filters"><button class="selected" data-filter="all">Alle</button><button data-filter="walk">Natur</button><button data-filter="food">Essen</button><button data-filter="trip">Ausflug</button></div>
+      <div class="places" id="places"></div>
+    </section>
+
+    <section class="view" data-view="pack" aria-labelledby="pack-title">
+      <div class="section-head"><div><p class="kicker">Gemeinsam packen</p><h2 id="pack-title">Packliste</h2></div><button class="icon-button" id="sync-button" aria-label="Packliste synchronisieren">↻</button></div>
+      <div class="identity-row"><label for="user-name">Ich bin</label><select id="user-name"><option>Marc</option><option>Anne</option></select><span id="sync-status">Lokal gespeichert</span></div>
+      <div class="progress"><span id="progress-bar"></span></div>
+      <div class="pack-summary"><strong id="pack-count">0 / 0</strong><span>erledigt</span><button id="show-open">Nur offene</button></div>
+      <form id="add-item-form" class="add-form"><input id="new-item" required maxlength="80" placeholder="Neuen Eintrag hinzufügen" aria-label="Neuer Packlisteneintrag"><select id="new-category" aria-label="Kategorie"><option>Dokumente</option><option>Twix</option><option>Kleidung</option><option>Haus</option><option>Technik</option><option>Strand</option><option>Auto</option></select><button type="submit">Hinzufügen</button></form>
+      <div id="pack-groups"></div>
+    </section>
+
+    <section class="view" data-view="more" aria-labelledby="more-title">
+      <div class="section-head"><div><p class="kicker">Gut zu wissen</p><h2 id="more-title">Mehr</h2></div></div>
+      <article class="info-card"><h3>Twix in Dänemark</h3><ul><li>EU-Heimtierausweis, Mikrochip und Tollwutimpfung</li><li>Adressanhänger mit Telefonnummer</li><li>Leinenpflicht am Strand im Reisezeitraum</li><li>Zeckenschutz und ausreichend Wasser</li><li>Freilauf im Hundewald Vilsbøl</li></ul></article>
+      <article class="info-card"><h3>Kontakte</h3><dl><div><dt>Feriepartner Thy</dt><dd><a href="tel:+4597938022">+45 97 93 80 22</a></dd></div><div><dt>Notfall bis 22 Uhr</dt><dd><a href="tel:+494035674567">+49 40 3567 4567</a></dd></div><div><dt>Notruf</dt><dd><a href="tel:112">112</a></dd></div><div><dt>Hotel Flensburg</dt><dd><a href="tel:+4961468153712">+49 6146 815371-2</a></dd></div></dl></article>
+      <article class="info-card sensitive"><p class="kicker">Vertraulich</p><h3>Buchungen</h3><dl><div><dt>Feriepartner</dt><dd>126-94743</dd></div><div><dt>dansk.de</dt><dd>288197</dd></div><div><dt>B&B Hotel</dt><dd>BB21843439</dd></div></dl></article>
+      <article class="note"><strong>Aktualität</strong><p>Fährzeiten, Preise, Öffnungszeiten und rechtliche Hinweise vor Nutzung noch einmal aktuell prüfen.</p></article>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Hauptnavigation">
+    <button class="active" data-go="home"><span>⌂</span>Start</button>
+    <button data-go="trip"><span>→</span>Reise</button>
+    <button data-go="discover"><span>◇</span>Entdecken</button>
+    <button data-go="pack"><span>✓</span>Packen</button>
+    <button data-go="more"><span>…</span>Mehr</button>
+  </nav>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
