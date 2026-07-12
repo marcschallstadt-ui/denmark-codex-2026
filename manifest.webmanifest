@@ -1,0 +1,12 @@
+{
+  "name": "Agger 2026 - Unser Dänemark",
+  "short_name": "Agger 2026",
+  "description": "Reisebegleiter für Marc, Anne und Twix",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f4ec",
+  "theme_color": "#b5122b",
+  "icons": [{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
+
